@@ -26,7 +26,7 @@ Now quit julia with <CTRL><D> and restart it with:
 ```bash
 julia --project -t auto
 ```
-This uses the set of packages we just installed and starts julia using all available threads. This is useful when handling large data sets (millions of message).
+This uses the set of packages we just installed and starts julia using all available threads. This is useful when handling large data sets (millions of messages).
 
 ## Creating a sample data set
 
@@ -83,25 +83,24 @@ that n is nothing. The `round6` function is not strictly required, but for easy 
 of the csv output I wanted to have a fixed number of digits for the time stamp.
 
 If we now print the dataset in the REPL we get:
-```julia
-julia> include("src/export.jl")
-10×3 Dataset
- Row │ time          d1      d2     
-     │ round6        hex     hex    
-     │ Float64?      Int64?  Int64? 
-─────┼──────────────────────────────
-   1 │     0.000000      0a      14
-   2 │     0.100000      0b      15
-   3 │     0.200000      0c      16
-   4 │     0.300000      0d      17
-   5 │     0.400000      0e      18
-   6 │     0.500000      0f      19
-   7 │     0.600000      10      1a
-   8 │     0.700000      11      1b
-   9 │     0.800000      12      1c
-  10 │     0.900000      13      1d
 ```
-Now all columns are nicely formatted.
+julia> show(ds, show_row_number=false, eltypes=false)
+10×3 Dataset
+ time          d1  d2 
+──────────────────────
+     0.000000  0a  14
+     0.100000  0b  15
+     0.200000  0c  16
+     0.300000  0d  17
+     0.400000  0e  18
+     0.500000  0f  19
+     0.600000  10  1a
+     0.700000  11  1b
+     0.800000  12  1c
+     0.900000  13  1d
+```
+Now all columns are nicely formatted. I am using here the keyword parameters `show_row_number=false` 
+and`eltypes=false` to suppress the output of the column types and the row numbers.
 
 Saving this as .csv file is now easy:
 ```julia
