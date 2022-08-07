@@ -37,7 +37,12 @@ ds = Dataset(time=0.0, d1=10, d2=20)
 time = 0.1
 for i in 1:9
     global time
-    ds2 = Dataset(time=time, d1=10+i, d2=20+i)
+    if i == 5
+       d1 = missing
+    else
+       d1 = 10+i
+    end
+    ds2 = Dataset(time=time, d1=d1, d2=20+i)
     append!(ds, ds2)
     time += 0.1
 end
@@ -54,7 +59,7 @@ julia> ds
    2 │      0.1        11        21
    3 │      0.2        12        22
    4 │      0.3        13        23
-   5 │      0.4        14        24
+   5 │      0.4        --        24
    6 │      0.5        15        25
    7 │      0.6        16        26
    8 │      0.7        17        27
@@ -70,7 +75,7 @@ function round6(value)
 end
 
 function hex(n)
-    if isnothing(n) return "--" end
+    if ismissing(n) return "--" end
     string(n, base=16, pad=2)
 end
 
@@ -78,8 +83,8 @@ setformat!(ds, :time => round6)
 setformat!(ds, :d1 => hex)
 setformat!(ds, :d2 => hex)
 ```
-Because our dataset could contain empty values we need to handle the special case
-that n is nothing. The `round6` function is not strictly required, but for easy readability
+Because our dataset could contain missing values we need to handle the special case
+that n is missing. The `round6` function is not strictly required, but for easy readability
 of the csv output I wanted to have a fixed number of digits for the time stamp.
 
 If we now print the dataset in the REPL we get:
@@ -92,7 +97,7 @@ julia> show(ds, show_row_number=false, eltypes=false)
      0.100000  0b  15
      0.200000  0c  16
      0.300000  0d  17
-     0.400000  0e  18
+     0.400000  --  18
      0.500000  0f  19
      0.600000  10  1a
      0.700000  11  1b
@@ -115,7 +120,7 @@ time,d1,d2
     0.100000,0b,15
     0.200000,0c,16
     0.300000,0d,17
-    0.400000,0e,18
+    0.400000,--,18
     0.500000,0f,19
     0.600000,10,1a
     0.700000,11,1b
