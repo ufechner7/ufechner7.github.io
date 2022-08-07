@@ -126,7 +126,7 @@ time,d1,d2
 ## Importing this with LibreOffice
 You can just double click on the file `output.csv` and a dialog box will open. Just make sure to select the column type `text` for colum d1 and d2.
 
-![Dialog](dialog.png)
+![Dialog](https://raw.githubusercontent.com/ufechner7/ufechner7.github.io/4c0e76b638ec38c7de19d684ee8c019e43805b4a/_posts/dialog.png)
 
 When you click on OK you have a well formatted table which you can save as .odf spreadsheet or in Excel format
 for further analysis and distribution.
