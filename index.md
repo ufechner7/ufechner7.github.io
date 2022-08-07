@@ -1,5 +1,4 @@
-Here you can say lots of fun things about your site.
+Julia is the most beautiful programming language ever, as easy as Python and as fast as C.
 
-Maybe say a some things about yourself.
-
-Or maybe what you plan to blog about.
+In this blog I want to share some of my experiances in solving technical problems
+with Julia.
