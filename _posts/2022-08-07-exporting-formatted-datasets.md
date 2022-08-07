@@ -37,7 +37,7 @@ ds = Dataset(time=0.0, d1=10, d2=20)
 time = 0.1
 for i in 1:9
     global time
-    if i == 5
+    if i == 4
        d1 = missing
     else
        d1 = 10+i
@@ -83,7 +83,7 @@ setformat!(ds, :time => round6)
 setformat!(ds, :d1 => hex)
 setformat!(ds, :d2 => hex)
 ```
-Because our dataset could contain missing values we need to handle the special case
+Because our dataset can contain missing values we need to handle the special case
 that n is missing. The `round6` function is not strictly required, but for easy readability
 of the csv output I wanted to have a fixed number of digits for the time stamp.
 
