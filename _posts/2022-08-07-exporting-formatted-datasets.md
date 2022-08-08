@@ -31,7 +31,7 @@ This uses the set of packages we just installed and starts julia using all avail
 ## Creating a sample data set
 
 ```julia
-using InMemoryDatasets
+using InMemoryDatasets, DLMReader, Printf
 
 ds = Dataset(time=0.0, d1=10, d2=20)
 time = 0.1
@@ -115,6 +115,7 @@ The trick is to use the named parameter `mapformat=true`, if you do that the for
 is applied on the .csv output. The resulting file looks like this:
 
 ```
+shell> cat output.csv
 time,d1,d2
     0.000000,0a,14
     0.100000,0b,15
