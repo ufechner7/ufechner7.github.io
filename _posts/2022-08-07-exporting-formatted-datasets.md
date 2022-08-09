@@ -1,8 +1,8 @@
 # Exporting Formatted Datasets
 
-For analysing [CAN](https://en.wikipedia.org/wiki/CAN_bus) bus log files I am exporting the data sets with CAN messages to .csv and then import them in LibreOffice spread sheets. Finally I create Excel files that I can give to my collegues.
+For analysing [CAN bus](https://en.wikipedia.org/wiki/CAN_bus) log files I am exporting the data sets with CAN messages to .csv and then import them in LibreOffice spread sheets. Finally I create Excel files that I can give to my collegues.
 
-The CAN bus is used in cars, wind turbines, electric chargers, UAVs and many other industrial devices for the communication between intelligent sensors, actuators, controllers and user interface devices.
+The CAN bus is used in cars, wind turbines, electric chargers, UAVs and many other industrial devices for the communication between intelligent sensors, actuators, controllers and user interface devices. One log file can easily contain millions of messages.
 
 But CAN messages are usually hex encoded. So how can we export a dataset with some hex
 encoded columns?
