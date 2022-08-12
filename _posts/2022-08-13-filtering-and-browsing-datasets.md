@@ -2,7 +2,7 @@
 title: "Filtering and browsning datasets"
 date: 2022-08-13
 tags: Julia InMemoryDatasets
-published: false
+published: true
 ---
 # Filtering and browsing datasets
 
