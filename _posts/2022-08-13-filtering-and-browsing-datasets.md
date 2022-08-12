@@ -7,9 +7,7 @@ published: true
 # Filtering and browsing datasets
 
 ## Introduction
-The basic work flow of data analysis is filtering a large data set to extract the interesting
-aspects and to browse and/or plot the result. In this post I will give a basic example for
-filtering and browsing of data, plotting deserves a blog post on its own.
+The basic work flow of data analysis is filtering a large data set to extract the interesting aspects and to browse and/or plot the result. In this post I will give a basic example for filtering and browsing of data, plotting deserves a blog post on its own.
 
 ## Creating a test project
 For trying out a new package and/or example it is always good to create a new project first.
@@ -34,7 +32,7 @@ julia --project -t auto
 This uses the set of packages we just installed and starts julia using all available threads. This is useful when handling large data sets (millions of messages).
 
 ## Creating a sample data set
-To get a realistic impression of the performance we now create a sample data set with 100k entries. We use again a CAN bus log file as example, this time with m=8 data columns, one byte per column. For the address column, which uses two bytes we use a range of 46 different, randomly choosen values, starting with 0x101.
+To get a realistic impression of the performance we now create a sample data set with 100k entries. We use again a [CAN bus](https://en.wikipedia.org/wiki/CAN_bus) log file as example, this time with `m=8` data columns, one byte per column. For the address column, which uses two bytes we use a range of 46 different, randomly choosen values, starting with 0x101.
 
 ```julia
 using InMemoryDatasets, DLMReader, Printf
@@ -144,3 +142,6 @@ As you can see, all the data is nicely formatted as hexadecimal numbers.
 
 ## Further reading
 To learn more about the filtering options, have a look at [Filter observations](https://sl-solution.github.io/InMemoryDatasets.jl/stable/man/filter/).
+
+## Acknowlegements
+Thanks to [James D Foster](https://discourse.julialang.org/t/how-to-combine-prettytables-and-pager/85593/4?u=ufechner7) for providing the browse() function and the developers of [InMemoryDataframes](https://sl-solution.github.io/InMemoryDatasets.jl/stable/) for their nice package.
