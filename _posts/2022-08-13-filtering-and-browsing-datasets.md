@@ -1,6 +1,6 @@
 ---
 title: "Filtering and browsing datasets"
-date: 2022-08-13
+date: 2022-08-12
 tags: Julia InMemoryDatasets
 published: true
 ---
