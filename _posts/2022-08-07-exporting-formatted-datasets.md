@@ -1,3 +1,9 @@
+---
+title: "Filtering and browsning datasets"
+date: 2022-08-07
+tags: Julia InMemoryDatasets 
+published: true
+---
 # Exporting Formatted Datasets
 
 ## Introduction
@@ -40,15 +46,11 @@ ds = Dataset(time=0.0, d1=10, d2=20)
 time = 0.1
 for i in 1:9
     global time
-    if i == 4
-       d1 = missing
-    else
-       d1 = 10+i
-    end
-    ds2 = Dataset(time=time, d1=d1, d2=20+i)
+    ds2 = Dataset(time=time, d1=10+1, d2=20+i)
     append!(ds, ds2)
     time += 0.1
 end
+ds.d1[4] = missing
 ```
 If you run this code the dataset should look like this:
 ```julia
