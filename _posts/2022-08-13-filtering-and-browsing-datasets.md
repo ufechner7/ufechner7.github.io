@@ -86,9 +86,8 @@ for i in 1:8
 end
 ```
 
-## Filtering the data
-Let us assume that the devices with the address 0x103, 0x106 and 0x109 are output devices, and we want to filter
-all the messages sent to the output devices. For complex filter conditions a function that returns `true` or `false` is needed. Missing values must be handled correctly.
+## Filtering the data on one column
+Let us assume that the devices with the address 0x103, 0x106 and 0x109 are output devices, and we want to filter all the messages sent to the output devices. For complex filter conditions a function that returns `true` or `false` is needed. Missing values must be handled correctly.
 ```julia
 # CAN bus devices with a given set of addresses are output devices
 function isoutput(addr)
@@ -101,6 +100,19 @@ Finally we can apply the `filter` function, which requires three parameters, the
 # create the dataset msg_out with all messages sent to output devices
 msg_out = filter(ds, :addr, by=isoutput)
 ```
+## Filtering the data on two columns
+Lets assume that in addition to apply a filter on the column `addr` we are only interested in the data from `t=1000s` to `t=3000s`. Then we need a second filter function:
+```julia
+function ininterval(time)
+    if ismissing(time) return false end
+    time >= 1000.0 && time <= 3000.0
+end
+```
+and pass arrays of the column names and of the column filter functions to the dataset filter function.
+```julia
+msg_out_ininterval = filter(ds, [:time, :addr], by=[ininterval, isoutput])
+```
+
 
 ## Browsing through the output data
 The filtered data set `msg_out` is still too big to print it on one screen, so we need a way to browse through the result set. I am using the following function to do that:
