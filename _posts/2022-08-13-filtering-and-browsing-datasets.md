@@ -155,5 +155,5 @@ As you can see, all the data is nicely formatted as hexadecimal numbers.
 ## Further reading
 To learn more about the filtering options, have a look at [Filter observations](https://sl-solution.github.io/InMemoryDatasets.jl/stable/man/filter/).
 
-## Acknowlegements
+## Acknowledgements
 Thanks to [James D Foster](https://discourse.julialang.org/t/how-to-combine-prettytables-and-pager/85593/4?u=ufechner7) for providing the browse() function and the developers of [InMemoryDataframes](https://sl-solution.github.io/InMemoryDatasets.jl/stable/) for their nice package.
