@@ -77,11 +77,18 @@ pkg"add DataFrames"
 Now put your code in a file in the src folder, for example like this:
 ```bash
 cd src
-gedit hello_world.jl
+gedit my_plot.jl
 ```
 and put the following code into it:
 ```julia
-println("Hello world!")
+using Plots, DataFrames
+
+time = 0:0.01:10             # step range from 0 to 10 step 0.1
+u    = sin.(time*5)          # signal with a frequency of 5 rad/s
+step = 1 .- 1 ./ exp.(time)  # step response
+df = DataFrame(;time, u, step)
+plot(df.time,  u, legend=false)
+plot!(df.time, step)
 ```
 and save it.
 If you want to run it, make sure you are in the `test` folder and then
@@ -91,8 +98,11 @@ julia --project
 ```
 and execute your script with:
 ```julia
-include("src/hello_world.jl")
+include("src/my_plot.jl")
 ```
+You should see the following plot:
+![myplot](myplot.png)
+
 When you are happy with your code and the packages you are using, make a backup copy
 of your Manifest.toml file:
 ```bash
