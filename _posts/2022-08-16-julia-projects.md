@@ -55,6 +55,52 @@ The advantage of having a main() function is that you can include some error che
 ```
 The first timing you get includes the compilation time, the second number shows the pure execution time.
 
+It is a good habit to return `nothing`, unless you want to return your result, e.g. a plot (diagram) or a dataset.
+
 ## Scripts that are using packages
 If you are using any packages, you should create a proper project to keep track of your dependencies and their versions.
+
+That is simple:
+Creating a project does not mean to create a package. It is much simpler:
+```bash
+mkdir test
+cd test
+mkdir src
+julia --project="."
+```
+Now add the packages you need:
+```julia
+using Pkg
+pkg"add Plots"
+pkg"add DataFrames"
+```
+Now put your code in a file in the src folder, for example like this:
+```bash
+cd src
+gedit hello_world.jl
+```
+and put the following code into it:
+```julia
+println("Hello world!")
+```
+and save it.
+If you want to run it, make sure you are in the `test` folder and then
+start julia with:
+```bash
+julia --project
+```
+and execute your script with:
+```julia
+include("src/hello_world.jl")
+```
+When you are happy with your code and the packages you are using, make a backup copy
+of your Manifest.toml file:
+```bash
+cp Manifest.toml Manifest.toml.bak
+```
+If you - half a year later - update your packages and your code stops to work, just restore the Manifest file:
+```bash
+cp Manifest.toml.bak Manifest.toml
+```
+No need to create any module or Julia package...
 
