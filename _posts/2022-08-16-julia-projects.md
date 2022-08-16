@@ -181,4 +181,4 @@ julia = "1.8"
 If you want to understand the meaning of the `semantic versioning` that is used by Julia packages, please read the section [Compatibility](https://pkgdocs.julialang.org/v1/compatibility/) in the documentation of the package manager.
 
 ## Outlook
-If you want to create re-usable packages that you want to use in multiple programs/ projects consider to create real Julia packages. This is a little bit more complicated, but it has the advantage of automated my_projects and easy installation for yourself and others. I will talk about that in one of my future blog posts.
+If you want to create re-usable packages that you want to use in multiple programs/ projects consider to create real Julia packages. This is a little bit more complicated, but it has the advantage of automated unit tests and easy installation for yourself and others. I will talk about that in one of my future blog posts.
