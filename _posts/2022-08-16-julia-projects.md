@@ -63,8 +63,8 @@ If you are using any packages, you should create a proper project to keep track 
 That is simple:
 Creating a project does not mean to create a package. It is much simpler:
 ```bash
-mkdir test
-cd test
+mkdir my_project
+cd my_project
 mkdir src
 julia --project="."
 ```
@@ -95,7 +95,7 @@ end
 plt = main()
 ```
 and save it.
-If you want to run it, make sure you are in the `test` folder and then
+If you want to run it, make sure you are in the `my_project` folder and then
 start julia with:
 ```bash
 julia --project
@@ -171,7 +171,7 @@ DataFrames = "1.3"
 Plots = "1.31"
 julia = "1.8"
  ```
- If you have a Julia version older than 1.8 you can also just edit the file Project.toml manually with your preferred editor to add the compat section. If you code was tested with multiple package or Julia versions, you can create a list, for example:
+ If you have a Julia version older than 1.8 you can also just edit the file Project.toml manually with your preferred editor to add the compat section. If you code was my_projected with multiple package or Julia versions, you can create a list, for example:
  ```julia
  [compat]
  julia = "1.6,1.7,1.8"
@@ -181,4 +181,4 @@ julia = "1.8"
 If you want to understand the meaning of the `semantic versioning` that is used by Julia packages, please read the section [Compatibility](https://pkgdocs.julialang.org/v1/compatibility/) in the documentation of the package manager.
 
 ## Outlook
-If you want to create re-usable packages that you want to use in multiple programs/ projects consider to create real Julia packages. This is a little bit more complicated, but it has the advantage of automated tests and easy installation for yourself and others. I will talk about that in one of my future blog posts.
+If you want to create re-usable packages that you want to use in multiple programs/ projects consider to create real Julia packages. This is a little bit more complicated, but it has the advantage of automated my_projects and easy installation for yourself and others. I will talk about that in one of my future blog posts.
