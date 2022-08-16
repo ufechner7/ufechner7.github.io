@@ -1,17 +1,16 @@
 ---
-title: "Why am I using Julia?"
-date: 2022-08-15
+title: "Working with Julia projects"
+date: 2022-08-16
 tags: Julia
-published: false
+published: true
 ---
-# Working with projects
+# Working with Julia projects
 ## Introduction
-When you start to use Julia you might ask yourself: How shall I structure my code?
-There are different approaches for each programming language.
+When you start to use [Julia](https://julialang.org/) you might ask yourself: How shall I structure my code?
+There are different approaches for different use cases.
 
 ## Simple scripts
-If you just write short, simple scripts that are not using any packages you can just keep them in one file. If you care about performance you should put everything in a
-function. Example:
+If you just write short, simple scripts that are not using any packages you can just keep them in one file. If you care about performance you should put everything in a function. Example:
 ```julia
 # constants
 const LANG="DE"
