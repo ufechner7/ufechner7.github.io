@@ -142,7 +142,7 @@ If you are careful allow only bugfixes for the installed packages which means on
    [a93c6f00] DataFrames none
    [91a5bcdd] Plots      none
 ```
-Now select julia and enter 1.8, DataFrames and enter 1.3 and Plots and enter 1.31. Use the first two digits of the version numbers of the currently installed packages as shown by the command `st`.
+Now select julia and enter 1.8, DataFrames and enter 1.3 and Plots and enter 1.31. Use the first two numbers of the version strings of the currently installed packages as shown by the command `st`.
 If you now type `compat` again it should look like this:
 ```julia
 (my_project) pkg> compat
