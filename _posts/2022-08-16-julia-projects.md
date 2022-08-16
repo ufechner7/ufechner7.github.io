@@ -170,7 +170,7 @@ DataFrames = "1.3"
 Plots = "1.31"
 julia = "1.8"
  ```
- If you have a Julia version older than 1.8 you can also just edit the file Project.toml manually with your preferred editor to add the compat section. If you code was my_projected with multiple package or Julia versions, you can create a list, for example:
+ If you have a Julia version older than 1.8 you can also just edit the file Project.toml manually with your preferred editor to add the compat section. If you code was tested with multiple package or Julia versions, you can create a list, for example:
  ```julia
  [compat]
  julia = "1.6,1.7,1.8"
