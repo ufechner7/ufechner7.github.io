@@ -105,7 +105,7 @@ include("src/my_plot.jl")
 ```
 You should see the following plot:
 
-![myplot](myplot.png)
+![myplot](https://raw.githubusercontent.com/ufechner7/ufechner7.github.io/main/_posts/myplot.png)
 
 When you are happy with your code and the packages you are using, make a backup copy
 of your Manifest.toml file:
