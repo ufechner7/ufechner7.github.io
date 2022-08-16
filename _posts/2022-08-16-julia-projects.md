@@ -10,7 +10,7 @@ When you start to use [Julia](https://julialang.org/) you might ask yourself: Ho
 There are different approaches for different use cases.
 
 ## Simple scripts
-If you just write short, simple scripts that are not using any packages you can just keep them in one file. If you care about performance you should put everything in a function. Example:
+If you just write short, simple scripts that are not using any packages you can just keep them in one file and put them in any folder, no special folder structure needed. If you care about performance you should put everything in a function. Example:
 ```julia
 # constants
 const LANG="DE"
