@@ -133,7 +133,7 @@ Status `~/repos/my_project/Project.toml`
   [a93c6f00] DataFrames v1.3.4
   [91a5bcdd] Plots v1.31.7
 ```
-If you are careful allow only bugfixes for the installed packages which means only the last digit of the version number is allowed to be increased. To achieve that, type
+If you are careful allow only bugfixes for the installed packages which means only the last number of the version string is allowed to be increased. To achieve that, type
 ```julia
 (my_project) pkg> compat
       Compat `~/repos/my_project/Project.toml`
