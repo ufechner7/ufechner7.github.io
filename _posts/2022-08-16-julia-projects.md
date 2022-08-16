@@ -142,15 +142,15 @@ If you are careful allow only bugfixes for the installed packages which means on
    [a93c6f00] DataFrames none
    [91a5bcdd] Plots      none
 ```
-Now select julia and enter 1.8, DataFrames and enter 1.3 and Plots and enter 1.31. Use the first two numbers of the version strings of the currently installed packages as shown by the command `st`.
+Now select julia and enter ~1.8, DataFrames and enter ~1.3 and Plots and enter ~1.31. Use the first two numbers of the version strings of the currently installed packages as shown by the command `st`.
 If you now type `compat` again it should look like this:
 ```julia
 (my_project) pkg> compat
       Compat `~/repos/my_project/Project.toml`
   Select an entry to edit:
- >            julia      1.8
-   [a93c6f00] DataFrames 1.3
-   [91a5bcdd] Plots      1.31
+ >            julia      ~1.8
+   [a93c6f00] DataFrames ~1.3
+   [91a5bcdd] Plots      ~1.31
 ```
 Press `q` to quit and then `backspace` to quit the package manager mode.
 
@@ -166,14 +166,14 @@ DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
 
 [compat]
-DataFrames = "1.3"
-Plots = "1.31"
-julia = "1.8"
+DataFrames = "~1.3"
+Plots = "~1.31"
+julia = "~1.8"
  ```
  If you have a Julia version older than 1.8 you can also just edit the file Project.toml manually with your preferred editor to add the compat section. If your code was tested with multiple package or Julia versions, you can create a list, for example:
  ```julia
  [compat]
- julia = "1.6,1.7,1.8"
+ julia = "~1.6,~1.7,~1.8"
  ```
 
 ## Further reading
