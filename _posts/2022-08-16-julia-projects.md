@@ -83,7 +83,7 @@ and put the following code into it:
 ```julia
 using Plots, DataFrames
 
-function main
+function main()
     time = 0:0.01:10             # step range from 0 to 10 step 0.1
     u    = sin.(time*5)          # signal with a frequency of 5 rad/s
     step = 1 .- 1 ./ exp.(time)  # step response
