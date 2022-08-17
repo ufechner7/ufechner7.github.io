@@ -40,7 +40,7 @@ The structure is:
 - call the main function
 - return nothing
 
-Do not use global variables! That kills your performance.
+Do not use global variables! That kills your performance [^1].
 
 If you store this code in a file with the name `hello.jl` you can execute it from the REPL with the command:
 ```julia
@@ -181,3 +181,5 @@ If you want to understand the meaning of the `semantic versioning` that is used 
 
 ## Outlook
 If you want to create re-usable packages that you want to use in multiple programs/ projects consider to create real Julia packages. This is a little bit more complicated, but it has the advantage of automated unit tests and easy installation for yourself and others. I will talk about that in one of my future blog posts.
+
+[^1] You can assign a value with a different type to global variables. As a result Julia has to generate more generic code that is valid for potentially all types which is bad for the performance. From Julia 1.8 onwards you can annotate global variables with a concrete type, e.g. `NUMBER::Int64`. In this case the performance is better, but still not as good as it is for local variables.
