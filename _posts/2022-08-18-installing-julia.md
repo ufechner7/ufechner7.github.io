@@ -15,8 +15,8 @@ Furthermore there are different ways to install multiple Julia versions in paral
 
 ### Windows
 Please download and install Julia as explained [here](https://julialang.org/downloads/) .
-Choose the 64-bit (installer). Make sure to check the option "Add julia to path" when running the installer.
-For advanced users it is suggested also to install [git for Windows](https://gitforwindows.org/) which also includes the `bash` command line interface, which is very useful for small automation tasks. The git version control system keeps track of the changes of your files and allows SW development in a team.
+Choose the "64-bit (installer)". Make sure to check the option "Add Julia to path" when running the installer.
+For advanced users it is suggested also to install [git for Windows](https://gitforwindows.org/) which also includes the `bash` command line interface, very useful for small automation tasks. The git version control system keeps track of the changes of your files and allows SW development in a team.
 
 It is suggested to launch Julia from the command line, using either the "Windows command prompt" or "bash" by typing `julia` or `julia --project` (if you work with projects). If you never used a command prompt before, read the [Beginners Guide](https://www.makeuseof.com/tag/a-beginners-guide-to-the-windows-command-line/).
 
@@ -27,7 +27,6 @@ An installer and version manager for Julia called [juliaup](https://github.com/J
 Uninstallation is preferably performed by using the Windows uninstaller. The directory in %HOME%/.julia can then be deleted if you want to remove all traces of Julia (this includes user installed packages).
 
 ### Linux
-
 Copy and past the following line to install the latest stable version of Julia:
 ```
 bash -ci "$(curl -fsSL https://raw.githubusercontent.com/abelsiqueira/jill/master/jill.sh)"
