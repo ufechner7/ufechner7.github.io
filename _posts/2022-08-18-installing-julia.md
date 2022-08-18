@@ -36,9 +36,9 @@ If you want to be able to easily switch between different versions of Julia cons
 the Python version of jill, see https://github.com/johnnychen94/jill.py
 ```bash
 pip install jill --user -U
-jill install 1.7
+jill install 1.8
 ```
-If you should later install version 1.8 with `jill install 1.8` you can then switch between the versions with `jill switch 1.7` etc.
+If you should later install version 1.8 with `jill install 1.9` you can then switch between the versions with `jill switch 1.8` etc.
 
 It is suggested to add the following line to your ```.bashrc``` file:
 ```
@@ -49,7 +49,7 @@ This makes it possible to run julia with the shortcut `jl` later, if you have a 
 ### Mac
 Please download Julia from at https://julialang.org/downloads/
 
-A julia-1.7.3-mac64.dmg file is provided, which contains Julia-1.7.app. Installation is the same as any other Mac software: drag the Julia-1.7.app to Applications Folder's Shortcut. The Julia download runs on macOS 10.9 Mavericks and later releases. 
+A julia-1.8.0-mac64.dmg file is provided, which contains Julia-1.8.app. Installation is the same as any other Mac software: drag the Julia-1.8.app to Applications Folder's Shortcut. The Julia download runs on macOS 10.9 Mavericks and later releases. 
 
 You can launch Julia by opening the Julia app like any other application.
 
@@ -59,10 +59,10 @@ If you want to launch Julia from the command line, first open a new terminal win
 ```bash
 sudo mkdir -p /usr/local/bin
 sudo rm -f /usr/local/bin/julia
-sudo ln -s /Applications/Julia-1.7.app/Contents/Resources/julia/bin/julia /usr/local/bin/julia
+sudo ln -s /Applications/Julia-1.8.app/Contents/Resources/julia/bin/julia /usr/local/bin/julia
 ```
 
-This code creates a symlink to a Julia version (here 1.7) of your choosing. To launch Julia, simply type ```julia``` inside your shell and press return. If you are working with projects, use the command ```julia --project```.
+This code creates a symlink to a Julia version (here 1.8) of your choosing. To launch Julia, simply type ```julia``` inside your shell and press return. If you are working with projects, use the command ```julia --project```.
 
 #### Installing multiple versions in parallel
 The jill installers will most likely also work on Mac and allow easy switching of different Julia versions (see Linux section).
