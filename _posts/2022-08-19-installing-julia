@@ -6,12 +6,25 @@ published: false
 ---
 # Installing Julia and VSCode
 
+## Introduction
+Installing Julia is easy, but perhaps you also want to install an integrated development environment (IDE) or a version control system (e.g. git), therefore I give some hints how to do that in this blog post.
+
+Furthermore there are different ways to install multiple Julia versions in parallel and to keep your version up-to-date which is also explained in this blog post.
+
+## Installation of Julia
+
 ### Windows
 Please download and install Julia as explained at https://julialang.org/downloads/ .
 Choose the 64-bit (installer). Make sure to check the option "Add julia to path" when running the installer.
 For advanced users it is suggested also to install [git for Windows](https://gitforwindows.org/) which also includes the `bash` command line interface, which is very useful for small automation tasks. The git version control system keeps track of the changes of your files and allows the SW development in a team.
 
 It is suggested to launch Julia from the command line, using either the "Windows command prompt" or "bash" by typing `julia` or `julia --project` (if you work with projects). If you never used a command prompt before, read the [Beginners Guide](https://www.makeuseof.com/tag/a-beginners-guide-to-the-windows-command-line/).
+
+#### Juliaup
+An installer and version manager for Julia called [juliaup](https://github.com/JuliaLang/juliaup) is available in the Microsoft Store. It can be used to install specific Julia versions or update to the latest release. This package handles all PATH related aspects of Julia, and alerts users when new Julia versions are released.
+
+#### Uninstallation
+Uninstallation is preferably performed by using the Windows uninstaller. The directory in %HOME%/.julia can then be deleted if you want to remove all traces of Julia (this includes user installed packages).
 
 ### Linux
 
@@ -34,9 +47,28 @@ alias jl='./bin/run_julia'
 This makes it possible to run julia with the shortcut `jl` later, if you have a `run_julia` script in the `bin` folder of your projects. I suggest to use such a script, the most simple version of it would just contain the line `julia --project` . 
 
 ### Mac
-Please download and install Julia as explained at https://julialang.org/downloads/
+Please download Julia from at https://julialang.org/downloads/
 
+A julia-1.7.3-mac64.dmg file is provided, which contains Julia-1.7.app. Installation is the same as any other Mac software: drag the Julia-1.7.app to Applications Folder's Shortcut. The Julia download runs on macOS 10.9 Mavericks and later releases. 
+
+You can launch Julia by opening the Julia app like any other application.
+
+#### Add Julia to PATH
+If you want to launch Julia from the command line, first open a new terminal window, then run the following snippet from your shell (e.g., using the Terminal app, not inside the Julia prompt).
+
+```bash
+sudo mkdir -p /usr/local/bin
+sudo rm -f /usr/local/bin/julia
+sudo ln -s /Applications/Julia-1.7.app/Contents/Resources/julia/bin/julia /usr/local/bin/julia
+```
+
+This code creates a symlink to a Julia version (here 1.7) of your choosing. To launch Julia, simply type ```julia``` inside your shell and press return. If you are working with projects, use the command ```julia --project```.
+
+#### Installing multiple versions in parallel
 The jill installers will most likely also work on Mac and allow easy switching of different Julia versions (see Linux section).
+
+#### Uninstallation
+You can uninstall Julia by deleting `Julia.app` and the packages directory in `~/.julia` . Multiple `Julia.app` binaries can co-exist without interfering with each other. If you would also like to remove your preferences files, remove `~/.julia/config/startup.jl` and `~/.julia/logs/repl_history.jl` .
 
 ## Installation of the IDE VSCode
 It is useful to install the integrated development environment VSCode, even though it is not
