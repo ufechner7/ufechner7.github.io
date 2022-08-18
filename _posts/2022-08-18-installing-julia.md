@@ -47,7 +47,7 @@ alias jl='./bin/run_julia'
 This makes it possible to run julia with the shortcut `jl` later, if you have a `run_julia` script in the `bin` folder of your projects. I suggest to use such a script, the most simple version of it would just contain the line `julia --project` . 
 
 ### Mac
-Please download Julia from at https://julialang.org/downloads/
+Please download Julia [here](https://julialang.org/downloads/) .
 
 A julia-1.8.0-mac64.dmg file is provided, which contains Julia-1.8.app. Installation is the same as any other Mac software: drag the Julia-1.8.app to Applications Folder's Shortcut. The Julia download runs on macOS 10.9 Mavericks and later releases. 
 
