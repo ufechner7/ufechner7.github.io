@@ -77,7 +77,7 @@ required. You can also use any editor of your choice.
 VSCode provides syntax highlighting, but also the feature "goto definition" which can help to understand
 and explore the code. 
 
-<p align="center"><img src="https://raw.githubusercontent.com/aenarete/KiteSimulators.jl/main/docs/vscode.png" width="600" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/ufechner7/ufechner7.github.io/main/_posts/vscode.png" width="600" /></p>
 
 You can download and install VSCode for all operating systems from this location: https://code.visualstudio.com/
 
