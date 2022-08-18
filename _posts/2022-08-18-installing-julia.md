@@ -9,7 +9,9 @@ published: true
 ## Introduction
 Installing Julia is easy, but perhaps you also want to install an integrated development environment (IDE) or a version control system (e.g. git), therefore I give some hints how to do that in this blog post.
 
-Furthermore there are different ways to install multiple Julia versions in parallel and to keep your version up-to-date which is also explained in this blog post.
+Furthermore there are different ways to install multiple Julia versions in parallel and to keep your version up-to-date which are also explained in this blog post.
+
+Highlights of version 1.8 of Julia are explained [here](https://julialang.org/blog/2022/08/julia-1.8-highlights/) .
 
 ## Installation of Julia
 
@@ -77,7 +79,7 @@ VSCode provides syntax highlighting, but also the feature "goto definition" whic
 
 <p align="center"><img src="https://raw.githubusercontent.com/ufechner7/ufechner7.github.io/main/_posts/vscode.png" width="600" /></p>
 
-You can download and install VSCode for all operating systems from this location: https://code.visualstudio.com/
+You can download and install VSCode for all operating systems [here](https://code.visualstudio.com/) .
 
 For Ubuntu Linux the following ppa can be used to install vscode and to keep it up-to-date: [https://www.ubuntuupdates.org/ppa/vscode](https://www.ubuntuupdates.org/ppa/vscode) .
 
