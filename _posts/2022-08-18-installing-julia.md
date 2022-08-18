@@ -1,10 +1,10 @@
 ---
-title: "Installing Julia and VSCode"
+title: "Installing Julia 1.8 and VSCode"
 date: 2022-08-18
 tags: Julia
 published: true
 ---
-# Installing Julia and VSCode
+# Installing Julia 1.8 and VSCode
 
 ## Introduction
 Installing Julia is easy, but perhaps you also want to install an integrated development environment (IDE) or a version control system (e.g. git), therefore I give some hints how to do that in this blog post.
@@ -74,8 +74,7 @@ You can uninstall Julia by deleting `Julia.app` and the packages directory in `~
 It is useful to install the integrated development environment VSCode, even though it is not
 required. You can also use any editor of your choice. 
 
-VSCode provides syntax highlighting, but also the feature "goto definition" which can help to understand
-and explore the code. 
+VSCode provides syntax highlighting, but also the feature "goto definition" which can help to understand and explore the code. 
 
 <p align="center"><img src="https://raw.githubusercontent.com/ufechner7/ufechner7.github.io/main/_posts/vscode.png" width="600" /></p>
 
@@ -83,8 +82,17 @@ You can download and install VSCode for all operating systems from this location
 
 For Ubuntu Linux the following ppa can be used to install vscode and to keep it up-to-date: [https://www.ubuntuupdates.org/ppa/vscode](https://www.ubuntuupdates.org/ppa/vscode) .
 
+### Installing the Julia extension
+- Start or open Visual Studio Code.
+- Select **View** and then click **Extensions** to open Extension View.
+- Enter the term `julia` in the marketplace search box. Click the green **Install** button to download the extension.
+
+![Julia VSCode extension](https://raw.githubusercontent.com/ufechner7/ufechner7.github.io/main/_posts/julia_vscode_extension.png)
+
+You successfully downloaded the Julia extension for VS Code.
+
+*NOTE:* It is recommended that you restart VS Code after installation.
+
 Julia development with VSCode is well documented here: [Julia Visual Studio Code Documentation](https://www.julia-vscode.org/docs/stable/)
 
-I would NOT use all the advanced features of julia-vscode, I prefer to just use the vscode terminal and launch julia
-from the terminal. This makes it easy to launch Julia with any command line options and also to start
-and restart Julia quickly.
+I would NOT use all the advanced features of julia-vscode, I prefer to just use the vscode terminal and launch julia from the terminal. This makes it easy to launch Julia with any command line options and also to start and restart Julia quickly.
