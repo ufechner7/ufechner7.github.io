@@ -38,7 +38,7 @@ the Python version of jill, see https://github.com/johnnychen94/jill.py
 pip install jill --user -U
 jill install 1.8
 ```
-If you should later install version 1.8 with `jill install 1.9` you can then switch between the versions with `jill switch 1.8` etc.
+If you should later install version 1.9 with `jill install 1.9` you can then switch between the versions with `jill switch 1.8` etc.
 
 It is suggested to add the following line to your ```.bashrc``` file:
 ```
