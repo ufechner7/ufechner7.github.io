@@ -4,7 +4,7 @@ date: 2022-08-07
 tags: Julia InMemoryDatasets 
 published: true
 ---
-# Exporting Formatted Datasets
+# Exporting formatted datasets
 
 ## Introduction
 For analysing [CAN bus](https://en.wikipedia.org/wiki/CAN_bus) log files I am exporting the data sets with CAN messages to .csv and then import them in LibreOffice spread sheets. Finally I create Excel files that I can give to my collegues.
