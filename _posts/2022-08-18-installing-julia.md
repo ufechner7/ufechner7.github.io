@@ -14,7 +14,7 @@ Furthermore there are different ways to install multiple Julia versions in paral
 ## Installation of Julia
 
 ### Windows
-Please download and install Julia as explained at https://julialang.org/downloads/ .
+Please download and install Julia as explained [here](https://julialang.org/downloads/) .
 Choose the 64-bit (installer). Make sure to check the option "Add julia to path" when running the installer.
 For advanced users it is suggested also to install [git for Windows](https://gitforwindows.org/) which also includes the `bash` command line interface, which is very useful for small automation tasks. The git version control system keeps track of the changes of your files and allows the SW development in a team.
 
