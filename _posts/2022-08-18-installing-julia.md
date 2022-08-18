@@ -34,7 +34,7 @@ Copy and past the following line to install the latest stable version of Julia:
 bash -ci "$(curl -fsSL https://raw.githubusercontent.com/abelsiqueira/jill/master/jill.sh)"
 ```
 If you want to be able to easily switch between different versions of Julia consider to install
-the Python version of jill, see https://github.com/johnnychen94/jill.py
+the Python version of [jill](https://github.com/johnnychen94/jill.py) .
 ```bash
 pip install jill --user -U
 jill install 1.8
