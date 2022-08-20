@@ -97,3 +97,10 @@ You successfully downloaded the Julia extension for VS Code.
 Julia development with VSCode is well documented here: [Julia Visual Studio Code Documentation](https://www.julia-vscode.org/docs/stable/)
 
 I would NOT use all the advanced features of julia-vscode, I prefer to just use the vscode terminal and launch julia from the terminal. This makes it easy to launch Julia with any command line options and also to start and restart Julia quickly.
+
+### Other useful VSCode extensions
+- Project Manager
+- Better TOML
+- Code Spell Checker
+
+VScode supports git out-of-the box.
