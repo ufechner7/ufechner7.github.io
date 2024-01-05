@@ -10,7 +10,7 @@ When you start to use [Julia](https://julialang.org/) you might ask yourself: Ho
 There are different approaches for different use cases.
 
 ## Simple scripts
-If you just write short, simple scripts that are not using any packages you can just keep them in one file and put them in any folder, no special folder structure needed. If you care about performance you should put everything in a function. Example:
+If you just write short, simple scripts that are not using any packages you can just keep them in one file and put them in any folder, no special folder structure is needed. If you care about performance you should put everything in a function. Example:
 ```julia
 # constants
 const LANG="DE"
@@ -47,16 +47,16 @@ If you store this code in a file with the name `hello.jl` you can execute it fro
 include("hello.jl")
 ```
 
-The advantage of having a main() function is that you can include some error checks and return an error code if they fail. Furthermore you can measure the performance by running:
+The advantage of having a main() function is that you can include some error checks and return an error code if they fail. Furthermore, you can measure the performance by running:
 ```julia
-@time("hello.jl")
+@time include("hello.jl")
 @time main()
 ```
-The first timing you get includes the compilation time, the second number shows the pure execution time.
+The first timing you get includes the compilation time, and the second number shows the pure execution time.
 
 It is a good habit to return `nothing`, unless you want to return your result, e.g. a plot (diagram) or a dataset.
 
-## Scripts that are using packages
+## Scripts that use packages
 If you are using any packages, you should create a proper project to keep track of your dependencies and their versions.
 
 That is simple:
@@ -95,7 +95,7 @@ plt = main()
 ```
 and save it.
 If you want to run it, make sure you are in the `my_project` folder and then
-start julia with:
+start Julia with:
 ```bash
 julia --project
 ```
@@ -112,19 +112,19 @@ of your Manifest.toml file:
 ```bash
 cp Manifest.toml Manifest.toml.bak
 ```
-If you - half a year later - update your packages and your code stops to work, just restore the Manifest file:
+If you - half a year later - update your packages and your code stops working, just restore the Manifest file:
 ```bash
 cp Manifest.toml.bak Manifest.toml
 ```
 No need to create any module or Julia package...
 
-## Using compat to improve long term robustness
+## Using compat to improve long-term robustness
 If you add compat bounds to the versions of the packages you are using your project becomes more robust. This means,
 if you are adding new packages in the future the currently used packages will not be unintentionally upgraded.
 
 If you are using Julia 1.8 or newer you can use the following approach:
 
-1. launch julia with `julia --project`
+1. launch Julia with `julia --project`
 2. enter the package manager mode by pressing the key `]`
 3. list the status of your project:
 ```julia
@@ -142,7 +142,7 @@ If you are careful allow only bugfixes for the installed packages which means on
    [a93c6f00] DataFrames none
    [91a5bcdd] Plots      none
 ```
-Now select julia and enter ~1.8, DataFrames and enter ~1.3 and Plots and enter ~1.31. Use the first two numbers of the version strings of the currently installed packages as shown by the command `st`.
+Now select Julia and enter ~1.8, DataFrames and enter ~1.3 and Plots and enter ~1.31. Use the first two numbers of the version strings of the currently installed packages as shown by the command `st`.
 If you now type `compat` again it should look like this:
 ```julia
 (my_project) pkg> compat
@@ -156,7 +156,7 @@ Press `q` to quit and then `backspace` to quit the package manager mode.
 
 *Congratulations!*
 
- You have now set limits for your package versions, and if you should type `up` in the package manger the next time you will only get bugfixes for the installed packages, but nothing that could brake your current code.
+ You have now set limits for your package versions, and if you type `up` in the package manager the next time you will only get bugfixes for the installed packages, but nothing that could break your current code.
 
  Your Project.toml file should now look like this:
  ```julia
@@ -170,7 +170,7 @@ DataFrames = "~1.3"
 Plots = "~1.31"
 julia = "~1.8"
  ```
- If you have a Julia version older than 1.8 you can also just edit the file Project.toml manually with your preferred editor to add the compat section. If your code was tested with multiple package or Julia versions, you can create a list, for example:
+ If you have a Julia version older than 1.8 you can also just edit the file Project.toml manually with your preferred editor to add the compat section. If your code was tested with multiple packages or Julia versions, you can create a list, for example:
  ```julia
  [compat]
  julia = "~1.6,~1.7,~1.8"
@@ -180,8 +180,8 @@ julia = "~1.8"
 If you want to understand the meaning of the `semantic versioning` that is used by Julia packages, please read the section [Compatibility](https://pkgdocs.julialang.org/v1/compatibility/) in the documentation of the package manager.
 
 ## Outlook
-If you want to create re-usable packages that you want to use in multiple programs/ projects consider to create real Julia packages. This is a little bit more complicated, but it has the advantage of automated unit tests and easy installation for yourself and others. I will talk about that in one of my future blog posts.
+If you want to create reusable packages that you want to use in multiple programs/ projects consider creating real Julia packages. This is a little bit more complicated, but it has the advantage of automated unit tests and easy installation for yourself and others. I will talk about that in one of my future blog posts.
 
 ---
 
-[1] You can assign a value with a different type to global variables. As a result Julia has to generate more generic code that is valid for potentially all types which is bad for the performance. From Julia 1.8 onwards you can annotate global variables with a concrete type, e.g. `NUMBER::Int64`. In this case the performance is better, but still not as good as it is for local variables.
+[1] You can assign a value with a different type to global variables. As a result, Julia has to generate more generic code that is valid for potentially all types which is bad for the performance. From Julia 1.8 onwards you can annotate global variables with a concrete type, e.g. `NUMBER::Int64`. In this case, the performance is better but still not as good as it is for local variables.
