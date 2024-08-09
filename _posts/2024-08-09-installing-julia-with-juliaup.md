@@ -15,7 +15,7 @@ Highlights of version 1.10 of Julia are explained [here](https://julialang.org/b
 
 ## Installation of Julia
 
-<details>
+<details markdown="1" >
   <summary>Windows</summary>
 
 ### Windows
@@ -36,7 +36,7 @@ Uninstallation is preferably performed by using the Windows uninstaller. The dir
 
 </details>
 
-<details>
+<details markdown="1" >
   <summary>Linux</summary>
 
 ### Linux
@@ -59,7 +59,7 @@ This makes it possible to run Julia with the shortcut `jl` later, if you have a 
 
 </details>
 
-<details>
+<details markdown="1" >
   <summary>Mac</summary>
 
 ### Mac
