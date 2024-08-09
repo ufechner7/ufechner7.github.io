@@ -11,7 +11,7 @@ Installing Julia is easy, but perhaps you also want to install an integrated dev
 
 Furthermore there are different ways to install multiple Julia versions in parallel and to keep your version up-to-date which are also explained in this blog post.
 
-Highlights of version 1.8 of Julia are explained [here](https://julialang.org/blog/2023/12/julia-1.10-highlights/) .
+Highlights of version 1.10 of Julia are explained [here](https://julialang.org/blog/2023/12/julia-1.10-highlights/) .
 
 ## Installation of Julia
 
