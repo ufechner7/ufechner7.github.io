@@ -21,12 +21,12 @@ Highlights of version 1.10 of Julia are explained [here](https://julialang.org/b
 ### Windows
 Please download and install Julia using `juliaup`. Launch the `Command Prompt` app and type:
 
-```
+```bash
 winget install julia -s msstore
 juliaup add 1.10
 juliaup update
 ```
-If that doesn't work, download https://install.julialang.org/Julia.appinstaller and double-click on the downloaded file to install it.
+If that doesn't work, download [https://install.julialang.org/Julia.appinstaller](https://install.julialang.org/Julia.appinstaller) and double-click on the downloaded file to install it.
 
 #### Optional
 It is suggested to install [Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/install) . Copy and paste works better, unicode works much better and you can use it with `bash` or `Command Prompt`, whatever you prefer. It is suggested to set one of these two as default using the `Settings` menu of Windows Terminal.
@@ -46,13 +46,13 @@ Copy and past the following line to install julia:
 curl -fsSL https://install.julialang.org | sh
 ```
 Restart your terminal, and then execute:
-```
+```bash
 juliaup add 1.10
 juliaup update
 ```
 
 It is suggested to add the following line to your ```.bashrc``` file:
-```
+```bash
 alias jl='./bin/run_julia'
 ```
 This makes it possible to run Julia with the shortcut `jl` later, if you have a `run_julia` script in the `bin` folder of your projects. I suggest to use such a script, the most simple version of it would just contain the line `julia --project` .
