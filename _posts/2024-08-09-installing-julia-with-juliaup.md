@@ -2,7 +2,7 @@
 title: "Installing Julia 1.10 and VSCode"
 date: 2024-08-09
 tags: Julia
-published: false
+published: true
 ---
 # Installing Julia 1.10 and VSCode
 
