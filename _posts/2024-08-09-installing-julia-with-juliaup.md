@@ -28,6 +28,11 @@ juliaup update
 ```
 If that doesn't work, download [https://install.julialang.org/Julia.appinstaller](https://install.julialang.org/Julia.appinstaller) and double-click on the downloaded file to install it.
 
+#### Git for Windows
+Most likely you want to have a bash shell (many projects require this) and the git version control system (very useful if you develop software).
+
+You can download it at: https://git-scm.com/download/win . During installation, select VSCode (or your preferred editor) as editor and select bash as your preferred terminal.
+
 #### Optional
 It is suggested to install [Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/install) . Copy and paste works better, unicode works much better and you can use it with `bash` or `Command Prompt`, whatever you prefer. It is suggested to set one of these two as default using the `Settings` menu of Windows Terminal.
 
