@@ -1,17 +1,17 @@
 ---
-title: "Installing Julia 1.10 and VSCode"
+title: "Installing Julia 1.11 and VSCode"
 date: 2024-08-09
 tags: Julia
 published: true
 ---
-# Installing Julia 1.10 and VSCode
+# Installing Julia 1.11 and VSCode
 
 ## Introduction
 Installing Julia is easy, but perhaps you also want to install an integrated development environment (IDE) or a version control system (e.g. git), therefore I give some hints how to do that in this blog post.
 
 Furthermore there are different ways to install multiple Julia versions in parallel and to keep your version up-to-date which are also explained in this blog post.
 
-Highlights of version 1.10 of Julia are explained [here](https://julialang.org/blog/2023/12/julia-1.10-highlights/) .
+Highlights of version 1.11 of Julia are explained [here](https://julialang.org/blog/2023/12/julia-1.11-highlights/) .
 
 ## Installation of Julia
 
@@ -23,15 +23,17 @@ Please download and install Julia using `juliaup`. Launch the `Command Prompt` a
 
 ```bash
 winget install julia -s msstore
-juliaup add 1.10
+juliaup add 1.11
 juliaup update
+juliaup default 1.11
 ```
+
 If that doesn't work, download [https://install.julialang.org/Julia.appinstaller](https://install.julialang.org/Julia.appinstaller) and double-click on the downloaded file to install it.
 
 #### Git for Windows
 Most likely you want to have a bash shell (many projects require this) and the git version control system (very useful if you develop software).
 
-You can download it [here](https://git-scm.com/download/win) . During installation, select VSCode (or your preferred editor) as editor and select bash as your preferred terminal.
+You can download it [from the Git website](https://git-scm.com/download/win) . During installation, select VSCode (or your preferred editor) as editor and select bash as your preferred terminal.
 
 #### Optional
 It is suggested to install [Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/install) . Copy and paste works better, unicode works much better and you can use it with `bash` or `Command Prompt`, whatever you prefer. It is suggested to set one of these two as default using the `Settings` menu of Windows Terminal.
@@ -47,19 +49,25 @@ Uninstallation is preferably performed by using the Windows uninstaller. The dir
 ### Linux
 
 Copy and past the following line to install julia:
-```
+
+```bash
 curl -fsSL https://install.julialang.org | sh
 ```
+
 Restart your terminal, and then execute:
+
 ```bash
-juliaup add 1.10
+juliaup add 1.11
 juliaup update
+juliaup default 1.11
 ```
 
 It is suggested to add the following line to your ```.bashrc``` file:
+
 ```bash
 alias jl='./bin/run_julia'
 ```
+
 This makes it possible to run Julia with the shortcut `jl` later, if you have a `run_julia` script in the `bin` folder of your projects. I suggest to use such a script, the most simple version of it would just contain the line `julia --project` .
 
 </details>
@@ -71,9 +79,11 @@ This makes it possible to run Julia with the shortcut `jl` later, if you have a 
 Please download and install `juliaup` as explained at https://github.com/JuliaLang/juliaup .
 
 Restart your terminal, and then execute:
-```
-juliaup add 1.10
+
+```bash
+juliaup add 1.11
 juliaup update
+juliaup default 1.11
 ```
 
 </details>
