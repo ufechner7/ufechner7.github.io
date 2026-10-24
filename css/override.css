@@ -43,3 +43,25 @@ hr {
   font-size: 2.5em;
   opacity: 0.3;
 }
+/* Copy button for code blocks */
+.post-content div.highlight {
+  position: relative;
+}
+
+.copy-button {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  padding: 2px 8px;
+  font-size: 0.75em;
+  color: #555;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.copy-button:hover {
+  opacity: 1;
+}

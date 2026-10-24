@@ -28,6 +28,22 @@ layout: default
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
+<script>
+  document.querySelectorAll(".post-content div.highlight").forEach(function (block) {
+    var button = document.createElement("button");
+    button.className = "copy-button";
+    button.type = "button";
+    button.textContent = "Copy";
+    button.addEventListener("click", function () {
+      var code = block.querySelector("code") || block.querySelector("pre");
+      navigator.clipboard.writeText(code.innerText).then(function () {
+        button.textContent = "Copied!";
+        setTimeout(function () { button.textContent = "Copy"; }, 1500);
+      });
+    });
+    block.appendChild(button);
+  });
+</script>
 <script src="https://utteranc.es/client.js"
         repo="ufechner7/ufechner7.github.io"
         issue-term="pathname"
