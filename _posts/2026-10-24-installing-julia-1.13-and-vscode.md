@@ -146,6 +146,9 @@ To try it, search for `JETLS` in the Extension View and follow the installation 
 
 VSCode supports git out-of-the box.
 
+## Alternative: JetBrains IDEs
+An alternative to VSCode are the IDEs from JetBrains, for example IntelliJ IDEA or PyCharm, together with the [Flexible Julia](https://plugins.jetbrains.com/plugin/29356-flexible-julia) plugin. This is a commercial offer, but the quality is high and bugs are fixed fast. Free licenses are available for students and researchers.
+
 ## AI Tools
 AI coding assistants can write, explain and debug Julia code, run your tests and fix the failures. They are very useful, but they make mistakes, so always review the changes they make.
 
