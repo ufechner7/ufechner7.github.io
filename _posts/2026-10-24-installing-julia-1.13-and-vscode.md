@@ -145,3 +145,15 @@ To try it, search for `JETLS` in the Extension View and follow the installation 
 - Code Spell Checker
 
 VSCode supports git out-of-the box.
+
+## AI Tools
+AI coding assistants can write, explain and debug Julia code, run your tests and fix the failures. They are very useful, but they make mistakes, so always review the changes they make.
+
+### Claude Code
+If you want good AI support, [Claude Code](https://claude.com/claude-code) is a good option. It is included in the Claude Pro subscription, which costs about 20 EUR per month. Claude Code works in the terminal, and there is also a VSCode extension. Search for `Claude Code` in the Extension View to install it.
+
+### OpenRouter
+A cheaper alternative is [OpenRouter](https://openrouter.ai/). You get one account and one API key for models from many different providers, and you pay per use instead of a monthly fee. A good, very cheap model for programming is [DeepSeek V4.1 Flash](https://openrouter.ai/deepseek/deepseek-v4.1-flash-1017). You can use OpenRouter models with any coding assistant that supports OpenRouter, for example the VSCode extension [Cline](https://cline.bot/).
+
+### Kaimon.jl
+[Kaimon.jl](https://github.com/kahliburke/Kaimon.jl) makes AI tools much more efficient when working with Julia. It is an MCP server that gives the AI assistant access to a running Julia session. Without it, the assistant has to start a new Julia process for every command and wait for packages to load and compile again. With Kaimon, the assistant runs code in the same Julia session that you see, and it can look up types and methods, run tests and use the debugger without these delays. Kaimon works with Claude Code, VSCode Copilot, Cursor and Gemini CLI. The installation is explained in its README.
