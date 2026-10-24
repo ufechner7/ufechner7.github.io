@@ -4,6 +4,8 @@ date: 2026-10-24
 tags: Julia
 published: true
 ---
+# Installing Julia 1.13 and VSCode
+
 ## Introduction
 Installing Julia is easy, but perhaps you also want to install an integrated development environment (IDE) or a version control system (e.g. git), therefore I give some hints how to do that in this blog post.
 
